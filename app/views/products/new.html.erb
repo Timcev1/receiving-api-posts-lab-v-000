@@ -21,7 +21,7 @@
 
       var values = $(this).serialize();
 
-      var posting = $.post('/posts', values);
+      var posting = $.product('/products', values);
 
       posting.done(function(data) {
         // TODO: handle response
