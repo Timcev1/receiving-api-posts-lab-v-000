@@ -33,7 +33,7 @@
       posting.done(function(data) {
        var product = data;
        $("#productName").text(product["name"]);
-       $("#postPrice").text(product["price"]);
+       $("#postPrice").text("$"+product["price"]);
        $("#productInventory").text(product["name"]);
        $("#productDescription").text(product["description"]);
      });
