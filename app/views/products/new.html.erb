@@ -24,9 +24,11 @@
       var posting = $.product('/products', values);
 
       posting.done(function(data) {
-        // TODO: handle response
-      });
-    });
-  });
+       var post = data;
+       $("#postTitle").text(post["title"]);
+       $("#postBody").text(post["description"]);
+     });
+   });
+ });
 </script>
 <% end %>
