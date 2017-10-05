@@ -14,11 +14,13 @@
   <%= f.submit "submit" %>
   <% end %>
 
-  <div id="postResult">
-    <h2 id="postTitle"></h2>
-    <p id="postBody"></p>
+  <div id="productresult">
+    <h2 id="productName"></h2>
+    <p id="postPrice"></p>
+    <p id="postDescription"></p>
+    <p id="postInventory"></p>
   </div>
-  
+
   <script type="text/javascript" charset="utf-8">
   $(function () {
     $('form').submit(function(event) {
@@ -30,8 +32,10 @@
 
       posting.done(function(data) {
        var post = data;
-       $("#postTitle").text(product["title"]);
-       $("#postBody").text(product["description"]);
+       $("#productName").text(product["name"]);
+       $("#postPrice").text(product["price"]);
+       $("#productInventory").text(product["name"]);
+       $("#productDescription").text(product["description"]);
      });
    });
  });
