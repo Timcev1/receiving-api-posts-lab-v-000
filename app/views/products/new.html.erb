@@ -16,9 +16,9 @@
 
   <div id="productResults">
     <h2 id="productName"></h2>
-    <p id="postPrice"></p>
-    <p id="postDescription"></p>
-    <p id="postInventory"></p>
+    <p id="productPrice"></p>
+    <p id="productDescription"></p>
+    <p id="productInventory"></p>
   </div>
 
   <script type="text/javascript" charset="utf-8">
@@ -33,7 +33,7 @@
       posting.done(function(data) {
        var product = data;
        $("#productName").text(product["name"]);
-       $("#postPrice").text("$"+product["price"]);
+       $("#productPrice").text("$"+product["price"]);
        $("#productInventory").text(product["name"]);
        $("#productDescription").text(product["description"]);
      });
